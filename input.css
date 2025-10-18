@@ -1,5 +1,6 @@
 @import "tailwindcss";
 
+
 @keyframes slide {
   0% { transform: translateX(0%); }
   33% { transform: translateX(-100%); }
@@ -8,12 +9,9 @@
 }
 
 .animate-slide {
-  animation: slide s infinite ease-in-out;
+  animation: slide 15s infinite ease-in-out;
 }
-h1 {
-  font-family: 'Montserrat', sans-serif;
-}
-
-p {
-  font-family: 'Montserrat', sans-serif;
-}
+p,h1 {
+        font-family: 'Montserrat', sans-serif;
+        
+    }
