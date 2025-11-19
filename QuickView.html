@@ -127,7 +127,7 @@
       </div>
       <div class="lg:flex lg:flex-1 lg:justify-end p-4 mr-2 gap-3">
            <a href="#" class=""><i class="fas fa-search"></i></a>
-           <a href="#" class=""><i class="fas fa-user"></i></a>
+           <a href="signIn.html" class=""><i class="fas fa-user"></i></a>
            <a href="#" class=""><i class="fa-solid fa-bag-shopping"></i></a>
         </div>
     </nav>
@@ -232,7 +232,13 @@
                 <div>1</div>
                 <div>-</div>
             </div>
-            <div class="bg-black/90 text-white text-center p-3 m-4 hover:bg-black"><button>Add to Cart</button></div>
+        
+<label for="checkoutToggle" class="bg-black/90 text-white text-center p-3 m-4 hover:bg-black block cursor-pointer rounded">
+  Checkout
+</label>
+
+
+          
             <div class="m-2 text-gray-500 border-b-2 border-gray-300"><p>Please look at the size guide before completing your order, as sizes vary from brand to brand.</p></div>
            <div class="space-y-5 max-w-md">
 
@@ -480,11 +486,143 @@
     </section>
   
 </main>
-<footer>
+<footer class="bg-black text-amber-50 w-full">
+  <div class="flex flex-wrap justify-around p-10">
+    
+    <div>
+      <h1 class ="text-2xl mb-3 ">Contact Us</h1>
+      <p class="text-gray-300  hover:text-gray-400 p-1"><a href="#">Contact us</a></p>
+      <p class="text-gray-300  hover:text-gray-400 p-1"><a href="#">elo works</a></p>
+      <p class="text-gray-300  hover:text-gray-400 p-1"><a href="#">selling at elo</a></p>
+    </div>
 
+    <div>
+      <h1 class="text-2xl mb-3 ">Help</h1>
+      <p class=" text-gray-300  hover:text-gray-400 p-1"><a href="#">How to order</a></p>
+      <p class="text-gray-300  hover:text-gray-400 p-1"><a href="#">How to use Gift Card</a></p>
+      <p class="text-gray-300 hover:text-gray-400  p-1"><a href="#">Returns & exchanges</a></p>
+      <p class="text-gray-300  hover:text-gray-400 p-1"><a href="#">Shipping Details</a></p>
+      <p class="text-gray-300  hover:text-gray-400 p-1"><a href="#">Privacy policy</a></p>
+      <p class="text-gray-300  hover:text-gray-400 p-1"><a href="#">FAQs</a></p>
+    </div>
+
+    <div>
+      <h1 class="text-2xl mb-3 ">What's New</h1>
+      <p class="text-gray-300  hover:text-gray-400 p-1"><a href="#">Store Locator</a></p>
+      <p class="text-gray-300  hover:text-gray-400 p-1"><a href="#">Become a Brand Ambassador</a></p>
+      <p class="text-gray-300  hover:text-gray-400 p-1"><a href="#">Why we do What we do</a></p>
+      <p class="text-gray-300  hover:text-gray-400 p-1"><a href="#">Customer Reviews</a></p>
+      <p class="text-gray-300  hover:text-gray-400 p-1"><a href="#">Company News</a></p>
+      <p class="text-gray-300  hover:text-gray-400 p-1"><a href="#">Who Made Your Clothes?</a></p>
+    </div>
+
+    <div>
+      <h1 class="text-2xl mb-3 ">Mailing Address</h1>
+      <p class="font-bold p-1">elo</p>
+      <p class="text-gray-300  hover:text-gray-400 p-1">11 KM Satiana Road</p>
+      <p class="text-gray-300  hover:text-gray-400 p-1">Faisalabad</p>
+      <p class="text-gray-300  hover:text-gray-400 p-1">Pakistan</p>
+      <p class="text-gray-300  hover:text-gray-400 p-1"><strong>042-29928093</strong></p>
+      <p class="text-gray-300  hover:text-gray-400 p-1">(9:00 AM to 6:00 PM)</p>
+      <p class="text-gray-300  hover:text-gray-400 p-1">Monday to Saturday</p>
+    </div>
+    <div>
+      <img src="badge.png" alt="">
+    </div>
+  </div>
+ <div class="flex justify-around">
+  <div class="text-center border-t border-gray-700 py-4 text-sm text-gray-400">
+    <p>© 2025 Elo. All rights reserved.</p>
+  </div>
+  <div class="flex justify-center items-center mt-4 pb-4">
+  <img src="visa.webp" alt="Visa Logo" class="w-20 h-auto object-contain opacity-90">
+  </div>
+  </div>
 </footer>
 
+ <!-- Hidden checkbox to toggle the cart drawer -->
+<input type="checkbox" id="checkoutToggle" class="hidden peer/checkout">
 
-  
+
+
+<!-- Dark transparent background overlay -->
+<div class="fixed inset-0 bg-black/50 opacity-0 invisible peer-checked/checkout:opacity-100 peer-checked/checkout:visible transition-all duration-500 z-40"></div>
+
+<!-- Checkout Side Drawer -->
+<div class="fixed top-0 right-0 h-full w-full sm:w-[450px] bg-white shadow-2xl transform translate-x-full peer-checked/checkout:translate-x-0 transition-transform duration-500 z-50 overflow-y-auto">
+
+  <!-- Header -->
+  <div class="p-6 flex justify-between items-center border-b">
+    <h2 class="text-2xl font-semibold">Your Cart</h2>
+    <label for="checkoutToggle" class="text-gray-600 hover:text-black text-3xl cursor-pointer">&times;</label>
+  </div>
+
+  <!-- Cart Content -->
+  <div class="p-6 space-y-6">
+
+    <!-- Item 1 -->
+    <div class="flex items-center gap-4 border-b pb-4">
+      <img src="men2.webp" alt="Product Image" class="w-20 h-20 object-contain rounded border">
+      <div class="flex-1">
+        <p class="font-semibold">Polo Republica Men's Houndstooth Boxer Shorts</p>
+        <p class="text-sm text-gray-500">Color: Black & White | Size: S</p>
+        <p class="font-semibold mt-1">Rs 399.00 each</p>
+        <div class="flex items-center mt-2 gap-3">
+          <button class="border border-gray-400 px-2 rounded text-lg">−</button>
+          <span>3</span>
+          <button class="border border-gray-400 px-2 rounded text-lg">+</button>
+        </div>
+        <p class="font-bold mt-2">Rs 1,197.00</p>
+      </div>
+    </div>
+
+    <!-- Item 2 -->
+    <div class="flex items-center gap-4 border-b pb-4">
+      <img src="men3.webp" alt="Product Image" class="w-20 h-20 object-contain rounded border">
+      <div class="flex-1">
+        <p class="font-semibold">Polo Republica Multipurpose Pouch</p>
+        <p class="text-sm text-gray-500">Color: Black | Size: M (8.50 x 6.25 Inches)</p>
+        <p class="font-semibold mt-1">Rs 26.00 each</p>
+        <div class="flex items-center mt-2 gap-3">
+          <button class="border border-gray-400 px-2 rounded text-lg">−</button>
+          <span>1</span>
+          <button class="border border-gray-400 px-2 rounded text-lg">+</button>
+        </div>
+        <p class="font-bold mt-2">Rs 26.00</p>
+      </div>
+    </div>
+
+    <!-- Loading / Separator -->
+    <p class="text-center text-gray-400 text-sm">Loading...</p>
+
+    <!-- Total Section -->
+    <div class="border-t pt-4 space-y-2">
+      <div class="flex justify-between text-lg font-semibold">
+        <span>Estimated Total</span>
+        <span>Rs 1,223.00</span>
+      </div>
+
+      <div class="bg-gray-100 p-4 rounded mt-3">
+        <p>Pay in 3 Installments of <strong>Rs. 468</strong></p>
+        <p class="text-gray-500 text-sm">Shopping Limit: Rs. 1,000 - Rs. 15,000</p>
+      </div>
+
+      <p class="text-sm text-gray-500">
+        Taxes included. Discounts and shipping calculated at checkout.
+      </p>
+
+      <p class="text-sm text-gray-500 mt-1">
+        Est. Delivery Date Between <strong>Tue Nov 11, 2025 - Sat Nov 15, 2025</strong>
+      </p>
+
+      <!-- Checkout button -->
+      <button class="bg-black text-white text-lg w-full mt-4 py-3 rounded hover:bg-gray-800 transition">
+        Proceed to Payment
+      </button>
+    </div>
+  </div>
+</div>
+
+
 </body>
 </html>
