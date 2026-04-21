@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+      <link rel="stylesheet" href="output.css">
+    <link rel="stylesheet" href="input.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>Order Confirmed – Elo</title>
+    <style>
+      p, h1, h2, h3, a, button, span, li { font-family: 'Montserrat', sans-serif; }
+
+      @keyframes checkPop {
+        0%   { transform: scale(0); opacity: 0; }
+        70%  { transform: scale(1.2); opacity: 1; }
+        100% { transform: scale(1); opacity: 1; }
+      }
+      .check-anim {
+        animation: checkPop 0.6s ease forwards;
+      }
+    </style>
+</head>
+<body>
+<div class="bg-white min-h-screen flex flex-col">
+
+  <!-- HEADER -->
+  <header class="relative inset-x-0 top-0 z-50">
+    <div class="bg-black/80">
+      <p class="text-white text-center text-sm py-1">Get free Shipping when you order over <span class="text-orange-400">Rs. 2999</span></p>
+    </div>
+    <div class="bg-black">
+      <p class="text-white text-center p-4 text-sm">Get 10% Additional Discount on all prepaid orders!</p>
+    </div>
+    <nav class="flex items-center justify-between p-6 lg:px-8">
+      <div class="flex lg:flex-1">
+        <a href="index.html" class="-m-1.5 p-1.5">
+          <img src="eloo_dccdad5c-7aa6-4916-bdb9-6e9d11089798.avif" alt="Elo Logo" class="h-8 w-auto" />
+        </a>
+      </div>
+      <div class="hidden lg:flex lg:gap-x-12">
+        <a href="men.html" class="text-sm/6 font-semibold text-gray-500 hover:text-black">Men</a>
+        <a href="women.html" class="text-sm/6 font-semibold text-gray-500 hover:text-black">Women</a>
+        <a href="kids.html" class="text-sm/6 font-semibold text-gray-500 hover:text-black">Kids</a>
+        <a href="clearance.html" class="text-sm/6 font-semibold text-red-500 border-b">Clearance</a>
+      </div>
+      <div class="lg:flex lg:flex-1 lg:justify-end p-4 mr-2 gap-3 flex">
+        <a href="#"><i class="fas fa-search"></i></a>
+        <a href="signIn.html"><i class="fas fa-user"></i></a>
+        <a href="cart.html"><i class="fa-solid fa-bag-shopping"></i></a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- MAIN -->
+  <main class="flex-1 max-w-3xl mx-auto w-full px-4 py-14">
+
+    <!-- Success Icon -->
+    <div class="flex justify-center mb-6">
+      <div class="check-anim w-20 h-20 rounded-full bg-black flex items-center justify-center">
+        <i class="fas fa-check text-white text-3xl"></i>
+      </div>
+    </div>
+
+    <h1 class="text-3xl font-bold text-center">Thank You for Your Order!</h1>
+    <p class="text-center text-gray-500 mt-2 text-sm">Your order has been placed and is being processed.</p>
+
+    <!-- Order Number & Date -->
+    <div class="flex justify-center gap-10 mt-6 text-center">
+      <div>
+        <p class="text-xs text-gray-500 uppercase tracking-wider">Order Number</p>
+        <p class="font-bold text-lg">#ELO-20251121</p>
+      </div>
+      <div>
+        <p class="text-xs text-gray-500 uppercase tracking-wider">Order Date</p>
+        <p class="font-bold text-lg">21 Nov, 2025</p>
+      </div>
+      <div>
+        <p class="text-xs text-gray-500 uppercase tracking-wider">Est. Delivery</p>
+        <p class="font-bold text-lg">25–28 Nov, 2025</p>
+      </div>
+    </div>
+
+    <!-- Stepper -->
+    <div class="mt-10 flex items-center justify-between px-4">
+      <div class="flex flex-col items-center">
+        <div class="w-10 h-10 rounded-full bg-black text-white flex items-center justify-center"><i class="fas fa-check text-sm"></i></div>
+        <p class="text-xs mt-2 font-semibold">Order Placed</p>
+      </div>
+      <div class="flex-1 h-1 bg-gray-300 mx-2"></div>
+      <div class="flex flex-col items-center">
+        <div class="w-10 h-10 rounded-full bg-gray-300 text-gray-500 flex items-center justify-center"><i class="fas fa-box text-sm"></i></div>
+        <p class="text-xs mt-2 text-gray-500">Processing</p>
+      </div>
+      <div class="flex-1 h-1 bg-gray-300 mx-2"></div>
+      <div class="flex flex-col items-center">
+        <div class="w-10 h-10 rounded-full bg-gray-300 text-gray-500 flex items-center justify-center"><i class="fas fa-truck text-sm"></i></div>
+        <p class="text-xs mt-2 text-gray-500">Shipped</p>
+      </div>
+      <div class="flex-1 h-1 bg-gray-300 mx-2"></div>
+      <div class="flex flex-col items-center">
+        <div class="w-10 h-10 rounded-full bg-gray-300 text-gray-500 flex items-center justify-center"><i class="fas fa-home text-sm"></i></div>
+        <p class="text-xs mt-2 text-gray-500">Delivered</p>
+      </div>
+    </div>
+
+    <!-- Order Items Summary -->
+    <div class="mt-10 border border-gray-200 rounded">
+      <div class="bg-gray-100 px-6 py-3 border-b border-gray-200">
+        <h2 class="font-semibold text-sm">Order Summary</h2>
+      </div>
+
+      <!-- Item 1 -->
+      <div class="flex items-center gap-4 px-6 py-4 border-b border-gray-100">
+        <img src="men2.webp" alt="" class="w-16 h-16 object-contain border border-gray-200 rounded bg-gray-50">
+        <div class="flex-1">
+          <p class="text-sm font-semibold">Polo Republica Men's Houndstooth Boxer Shorts</p>
+          <p class="text-xs text-gray-500">Color: Black & White | Size: S | Qty: 3</p>
+        </div>
+        <p class="font-bold text-sm">Rs. 1,197</p>
+      </div>
+
+      <!-- Item 2 -->
+      <div class="flex items-center gap-4 px-6 py-4">
+        <img src="men3.webp" alt="" class="w-16 h-16 object-contain border border-gray-200 rounded bg-gray-50">
+        <div class="flex-1">
+          <p class="text-sm font-semibold">Polo Republica Men's Drop Shoulder Oversized Tee</p>
+          <p class="text-xs text-gray-500">Color: Heather Gray | Size: L | Qty: 1</p>
+        </div>
+        <p class="font-bold text-sm">Rs. 1,299</p>
+      </div>
+
+      <!-- Totals -->
+      <div class="bg-gray-50 px-6 py-4 border-t border-gray-200 space-y-2">
+        <div class="flex justify-between text-sm">
+          <span class="text-gray-600">Subtotal</span>
+          <span>Rs. 2,496</span>
+        </div>
+        <div class="flex justify-between text-sm">
+          <span class="text-gray-600">Shipping</span>
+          <span class="text-green-600">Free</span>
+        </div>
+        <div class="flex justify-between font-bold text-base border-t border-gray-200 pt-2">
+          <span>Total Paid</span>
+          <span>Rs. 2,496</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Delivery Address -->
+    <div class="mt-6 border border-gray-200 rounded p-6">
+      <h2 class="font-semibold mb-3 text-sm">Delivery Address</h2>
+      <p class="text-sm text-gray-700">Ahmed Ali</p>
+      <p class="text-sm text-gray-500">House 12, Street 5, Gulshan-e-Iqbal</p>
+      <p class="text-sm text-gray-500">Karachi, Pakistan – 75300</p>
+      <p class="text-sm text-gray-500">+92 300 1234567</p>
+    </div>
+
+    <!-- CTA Buttons -->
+    <div class="flex flex-col sm:flex-row gap-4 mt-8">
+      <a href="index.html" class="flex-1">
+        <button class="w-full bg-black text-white py-3 text-sm font-semibold hover:bg-gray-800 rounded transition">
+          Continue Shopping
+        </button>
+      </a>
+      <button class="flex-1 border border-gray-400 text-gray-700 py-3 text-sm font-semibold hover:border-black rounded transition">
+        <i class="fas fa-download mr-2"></i> Download Invoice
+      </button>
+    </div>
+
+    <!-- Help note -->
+    <p class="text-center text-xs text-gray-400 mt-6">
+      A confirmation email has been sent. For help, call <strong>042-29928093</strong> (Mon–Sat, 9AM–6PM).
+    </p>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-black text-amber-50 w-full mt-10">
+    <div class="flex flex-wrap justify-around p-10">
+      <div>
+        <h1 class="text-2xl mb-3">Contact Us</h1>
+        <p class="text-gray-300 hover:text-gray-400 p-1"><a href="#">Contact us</a></p>
+        <p class="text-gray-300 hover:text-gray-400 p-1"><a href="#">elo works</a></p>
+      </div>
+      <div>
+        <h1 class="text-2xl mb-3">Help</h1>
+        <p class="text-gray-300 hover:text-gray-400 p-1"><a href="#">How to order</a></p>
+        <p class="text-gray-300 hover:text-gray-400 p-1"><a href="#">Returns & exchanges</a></p>
+        <p class="text-gray-300 hover:text-gray-400 p-1"><a href="#">Shipping Details</a></p>
+        <p class="text-gray-300 hover:text-gray-400 p-1"><a href="#">FAQs</a></p>
+      </div>
+      <div>
+        <h1 class="text-2xl mb-3">Mailing Address</h1>
+        <p class="font-bold p-1">elo</p>
+        <p class="text-gray-300 p-1">11 KM Satiana Road, Faisalabad, Pakistan</p>
+        <p class="text-gray-300 p-1"><strong>042-29928093</strong></p>
+      </div>
+    </div>
+    <div class="text-center border-t border-gray-700 py-4 text-sm text-gray-400">
+      <p>© 2025 Elo. All rights reserved.</p>
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>s
